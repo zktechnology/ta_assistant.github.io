@@ -1,65 +1,141 @@
 <!DOCTYPE html>
 <!-- saved from url=(0042)http://www.zktimecube.com:83/download.html -->
 <html lang="zh" ng-app="zk.download" class="ng-scope"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">[uib-typeahead-popup].dropdown-menu{display:block;}</style><style type="text/css">.uib-time input{width:50px;}</style><style type="text/css">.uib-datepicker .uib-title{width:100%;}.uib-day button,.uib-month button,.uib-year button{min-width:100%;}.uib-datepicker-popup.dropdown-menu{display:block;}.uib-button-bar{padding:10px 9px 2px;}</style><style type="text/css">.ng-animate.item:not(.left):not(.right){-webkit-transition:0s ease-in-out left;transition:0s ease-in-out left}</style><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>
-    <title>ZKBioBT-下载中心</title>
-    <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-            <meta name="description" content="">
-                <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                    <!-- Disable tap highlight on IE -->
-                    <meta name="msapplication-tap-highplight" content="no">
-                        <!-- Web Application Manifest -->
-                        <link rel="manifest" href="http://www.zktimecube.com:83/manifest.json">
-                            <!-- Add to homescreen for Chrome on Android -->
-                            <meta name="mobile-web-app-capable" content="yes">
-                                <meta name="application-name" content="Web Starter Kit">
-                                    <link rel="icon" sizes="192x192" href="http://www.zktimecube.com:83/images/touch/chrome-touch-icon-192x192.png">
-                                        <!-- Add to homescreen for Safari on iOS -->
-                                        <meta name="apple-mobile-web-app-capable" content="yes">
-                                            <meta name="apple-mobile-web-app-status-bar-style" content="black">
-                                                <meta name="apple-mobile-web-app-title" content="Web Starter Kit">
-                                                    <link rel="apple-touch-icon" href="http://www.zktimecube.com:83/images/touch/apple-touch-icon-152x152.png">
-                                                        <!-- Tile icon for Win8 (144x144 + tile color) -->
-                                                        <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
-                                                            <meta name="msapplication-TileColor" content="#78BF52">
-                                                                <!-- Color the status bar on mobile devices -->
-                                                                <meta name="theme-color" content="#78BF52">
-                                                                <link href="./download-ZKBioBT_files/main.css" rel="stylesheet">
-</head>
-<script>
-    function onClickApp()
-    {
-<!--        window.location.href="http://fusion.qq.com/app_download?appid=1105361865&platform=qzone&via=QZ.MOBILEDETAIL.QRCODE&u=3046917960";-->
-            window.location.href="http://mp.weixin.qq.com/mp/redirect?url=http://fusion.qq.com/app_download?appid=1105361865&platform=qzone&via=QZ.MOBILEDETAIL.QRCODE&u=3046917960";
+  <title>ZKBioBT-下载中心</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Disable tap highlight on IE -->
+  <meta name="msapplication-tap-highplight" content="no">
+  <!-- Web Application Manifest -->
+  <link rel="manifest" href="http://www.zktimecube.com:83/manifest.json">
+  <!-- Add to homescreen for Chrome on Android -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="application-name" content="Web Starter Kit">
+  <link rel="icon" sizes="192x192" href="http://www.zktimecube.com:83/images/touch/chrome-touch-icon-192x192.png">
+  <!-- Add to homescreen for Safari on iOS -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Web Starter Kit">
+  <link rel="apple-touch-icon" href="http://www.zktimecube.com:83/images/touch/apple-touch-icon-152x152.png">
+  <!-- Tile icon for Win8 (144x144 + tile color) -->
+  <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
+  <meta name="msapplication-TileColor" content="#78BF52">
+  <!-- Color the status bar on mobile devices -->
+  <meta name="theme-color" content="#78BF52">
+<link href="./download-ZKBioBT_files/main.css" rel="stylesheet">
+<style type="text/css">
+  #showSafariInfo {
+    width:100%;
+    height:100%;
+    overflow:hidden;
+    position:fixed;
+    z-index:1000;
+    background:rgba(0,0,0,.5);
+    top:0;
+    left:0;
+    display:none;
+}
+#showSafariInfo .tip {
+    padding: 10px 5px;
+    font-size: 18px;
+    width:100%;
+    background:#fff;
+    z-index:1001;
+}
+.top2bottom {
+    -webkit-animation:top2bottom 1.2s ease;
+    -moz-animation:top2bottom 1.2s ease;
+    -o-animation:top2bottom 1.2s ease;
+    animation:top2bottom 1.2s ease;
+    -webkit-animation-fill-mode:backwards;
+    -moz-animation-fill-mode:backwards;
+    -o-animation-fill-mode:backwards;
+    animation-fill-mode:backwards
+}
+.animate-delay-1 {
+    -webkit-animation-delay:1s;
+    -moz-animation-delay:1s;
+    -o-animation-delay:1s;
+    animation-delay:1s
+}
+@-webkit-keyframes top2bottom {
+    0% {
+    -webkit-transform:translateY(-300px);
+    opacity:.6
+}
+100% {
+    -webkit-transform:translateY(0px);
+    opacity:1
+}
+}@keyframes top2bottom {
+    0% {
+    transform:translateY(-300px);
+    opacity:.6
+}
+100% {
+    transform:translateY(0px);
+    opacity:1
+}
+</style>
+<script type="text/javascript">
+  function isWeiXin(){
+    var ua = window.navigator.userAgent.toLowerCase();
+    if(ua.match(/MicroMessenger/i) == 'micromessenger'){
+        return true;
+    }else{
+        return false;
     }
+  }
+  function showWeixinInfo(){
+     document.getElementById('showSafariInfo').style.display="block";
+  }
+  function hideWeixinInfo(){
+     document.getElementById('showSafariInfo').style.display="none";
+  }
+  function downloadIos(){
+    window.location.href="https://itunes.apple.com/cn/app/ta-assistant/id1170333558";
+    setTimeout(function(){
+      if(isWeiXin()){
+        showWeixinInfo();
+      }
+    },1000);
+
+  }
 </script>
+</head>
 
 <body class="download download-bg ng-scope" ng-controller="downloadCtrl as dc">
-
-
-    <div id="toast-container" ng-class="[config.position, config.animation]" class="ng-scope toast-top-right"><!-- ngRepeat: toaster in toasters --></div>
-    <div class="container download-container">
+  
+  <div id="toast-container" ng-class="[config.position, config.animation]" class="ng-scope toast-top-right"><!-- ngRepeat: toaster in toasters --></div>
+  <div class="container download-container">
+    <div class="row">
+      <div class="col-md-6 col-sm-12 col-xs-12">
         <div class="row">
-            <div class="col-md-6 col-sm-12 col-xs-12">
-                <div class="row">
-                    <div class="col-md-4 col-sm-12 col-xs-12  text-center">
-                        <div class="row row-margin">
-                            <a class="btn btn-success" ng-href="./download-ZKBioBT_files/ZKBioBT-1.4.01.apk" href="./download-ZKBioBT_files/ZKBioBT-1.4.01.apk"><img src="./download-ZKBioBT_files/ico_android.png">&nbsp;&nbsp;Android版下载</a>
-                        </div>
-                        <div class="row row-margin">
-                            <a class="btn btn-success" onclick="onClickApp()"><img src="./download-ZKBioBT_files/ico_ios.png">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;iOS版下载&nbsp;&nbsp;&nbsp;&nbsp;</a>
-                        </div>
-                    </div>
-                    <img class="col-md-4 col-sm-12 col-xs-12 text-center img-responsive" src="./download-ZKBioBT_files/qa-qr-down.png">
-                        </div>
+          <div class="col-md-4 col-sm-12 col-xs-12  text-center">
+            <div class="row row-margin">
+              <a class="btn btn-success" ng-href="https://www.pgyer.com/ta_assistant" 
+				href="https://www.pgyer.com/ta_assistant"><img src="./download-ZKBioBT_files/ico_android.png">&nbsp;&nbsp;Android版下载</a>
             </div>
-            <!--left side desc-->
-            <!--right side img-->
+            <div class="row row-margin">
+              <a class="btn btn-success" ng-href="" onclick="downloadIos()"><img src="./download-ZKBioBT_files/ico_ios.png">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;iOS版下载&nbsp;&nbsp;&nbsp;&nbsp;</a>
+            </div>
+          </div>
+              <img class="col-md-4 col-sm-12 col-xs-12 text-center img-responsive" src="./download-ZKBioBT_files/qa-qr-down.png">
         </div>
-        <!--download app end-->
+      </div>
+      <!--left side desc-->
+           <!--right side img-->
     </div>
+    <!--download app end-->
+  </div>
+  <div id="showSafariInfo" style="display:none;" onclick="hideWeixinInfo()">
+    <div class='tip top2bottom animate-delay-1'>
+     正在跳转中···若您正在微信中无法跳转，请点右上角的「···」按钮，选择「在Safari中打开」即可正常跳转噢~
+    </div>
+  </div>
+<script src="./download-ZKBioBT_files/vendors.js"></script><script src="./download-ZKBioBT_files/app.bundle.0be09d07114a51e5765f.js"></script>
 
-    <script src="./download-ZKBioBT_files/vendors.js"></script><script src="./download-ZKBioBT_files/app.bundle.0be09d07114a51e5765f.js"></script>
-    
-    
+
 </body></html>
